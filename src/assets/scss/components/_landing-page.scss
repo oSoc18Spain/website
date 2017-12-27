@@ -1,0 +1,276 @@
+/* landing landing page hero */
+
+  .landing-page-animation {
+    opacity: 0;
+    animation: landingOpacity 1s linear forwards;
+  }
+
+  @keyframes landingOpacity {
+    100% {
+      opacity: 1;
+    }
+  }
+
+/* landing page logo */
+
+  svg#c-logo {
+    width: 90vw;
+    position: relative;
+
+    fill: none;
+    stroke: white;
+    stroke-width: 1;
+
+    @include breakpoint(medium) {
+      width: auto;
+      height: 60vh;
+
+      margin-top: 5vh;
+      margin-bottom: 1rem;
+    }
+
+    @include breakpoint(large) {
+      height: 80vh;
+      min-height: 30rem;
+      max-height: 40rem;
+      max-width: 100%;
+
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+
+      left: -1rem;
+    }
+  }
+
+/* landing page logo animation */
+
+  svg#c-logo {
+    stroke-dasharray: 0 1000;
+    animation: dash 2s linear forwards;
+    transform: translate3d(0,0,0);
+  }
+
+  @keyframes dash {
+    100% {
+      stroke-dasharray: 1000 0;
+    }
+  }
+
+  #c-logo__letter-o,
+  #c-logo__letter-comma,
+  #c-logo__letter-s,
+  #c-logo__letter-i,
+  #c-logo__letter-exclamation-stick,
+  #c-logo__letter-exclamation-dot {
+    transform: scale(0.99);
+  }
+
+  #c-logo__letter-o {
+    animation: move 1.5s linear 0.2s forwards;
+  }
+
+  #c-logo__letter-comma {
+    animation: move 1.5s linear 0.2s forwards;
+  }
+
+  #c-logo__letter-s {
+    animation: move 1.5s linear 0.2s forwards;
+  }
+
+  #c-logo__letter-i {
+    animation: move 1.5s linear 0.2s forwards;
+  }
+
+  #c-logo__letter-exclamation-stick {
+    animation: move 1.5s linear 0.2s forwards;
+  }
+
+  #c-logo__letter-exclamation-dot {
+    animation: move 1.5s linear 0.2s forwards;
+  }
+
+  @keyframes move {
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+/* landing page text */
+
+  .landing-page-text-container {
+    transition: all 200ms;
+    position: relative;
+
+    @include breakpoint(medium) {
+      top: 5vh;
+    }
+
+    @include breakpoint(large) {
+      top: 0;
+    }
+  }
+
+  .landing-page-text {
+    background-color: white;
+    margin: 0;
+    padding: 1em;
+
+    opacity: 0;
+    animation: landingMovement 0.5s ease-in-out 1s forwards;
+    transform: translate3d(0,0,0);
+
+    h1, p {
+      color: $primary-color;
+    }
+
+    @keyframes landingMovement {
+      100% {
+        opacity: 1;
+        margin-top: 1vh;
+      }
+    }
+
+    @include breakpoint(medium) {
+      position: absolute;
+
+      padding: 2.5em;
+      top: -5rem;
+      margin-left: 1rem;
+
+      @keyframes landingMovement {
+        100% {
+          opacity: 1;
+          margin-top: 50vh;
+        }
+      }
+    }
+
+    @include breakpoint(large) {
+      margin-left: 0;
+      padding: 3.5em;
+      margin-top: 47rem;
+      margin-right: 1rem;
+
+      @keyframes landingMovement {
+        100% {
+          opacity: 1;
+          margin-top: 40vh;
+        }
+      }
+    }
+  }
+
+// .landing-page-text-animation {
+
+//   .background-white {
+//     padding: 1em;
+//     margin-bottom: 2rem;
+//   }
+
+//   @include breakpoint(medium) {
+//     position: absolute;
+//     opacity: 0;
+//     bottom: 0;
+//     animation: leftOpacity 1s linear 1s forwards;
+//     left: 1rem;
+//   }
+
+//   @include breakpoint(large) {
+//     left: auto;
+//   }
+// }
+
+// @include breakpoint(small) {
+//   @keyframes leftOpacity {
+//     100% {
+//       opacity: 1;
+//     }
+//   }
+// }
+
+// @include breakpoint(medium) {
+//   @keyframes leftOpacity {
+//     100% {
+//       left: 1.8rem;
+//       opacity: 1;
+//       right: auto;
+//     }
+//   }
+// }
+
+
+/* hero typography */
+
+  h1.hero-head {
+    // font-size: 2.5rem;
+    line-height: 1.2;
+
+    @include breakpoint(medium) {
+      line-height: 1.05;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    @include breakpoint(large) {
+      font-size: 3rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+    font-weight: 300;
+
+    @include breakpoint(large) {
+      font-size: 1.5em;
+    }
+  }
+
+/* stakeholders div */
+
+  .stakeholders {
+    // margin-top: 1rem;
+
+    .cell .grid-x .cell {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      padding-right: 1.5rem;
+    }
+
+    @include breakpoint(small only) {
+      .cell .grid-x .cell {
+        padding: 0 0.5rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    @include breakpoint(medium) {
+
+      .cell .grid-x .cell {
+        padding-right: 3em;
+        margin-bottom: 2rem;
+      }
+    }
+
+    @include breakpoint(medium only) {
+      margin-top: 1rem;
+      margin-left: 1rem;
+
+    //   .cell .grid-x .cell {
+    //     min-width: 290px;
+    //     max-width: 350px;
+    //   }
+
+    //   .cell .grid-x .cell:first-child {
+    //     position: relative;
+    //     top: -5rem;
+    //   }
+
+    //   .cell .grid-x .cell:nth-child(2) {
+    //     margin: 0.5rem 0 0 0;
+    //   }
+    }
+  }

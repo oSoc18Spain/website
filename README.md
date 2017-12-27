@@ -1,89 +1,53 @@
-oSoc17-website
-==============
+# Open Summer of Code / Innovation template
 
-Website for open Summer of code 2017
+This is a quick design jubmled together for the new open Summer of code edition. It needs further explorations and real content.
 
--- It's a clone of an early version of the oSoc14 website. For more up to date features, steal from https://github.com/oSoc17/website
+It has been based on the ZURB template &mdash; how to set it up and troubleshoot can be found in the following paragraphs.
 
-# Deployment
+## ZURB Template
 
-Make sure bower is installed
+[![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)
 
-> npm install -g bower
+**Please open all issues with this template on the main [Foundation for Sites](https://github.com/zurb/foundation-sites/issues) repo.**
 
-Install other npm dependencies (only needed for Dev)
+This is the official ZURB Template for use with [Foundation for Sites](http://foundation.zurb.com/sites). We use this template at ZURB to deliver static code to our clients. It has a Gulp-powered build system with these features:
 
-> npm install
+- Handlebars HTML templates with Panini
+- Sass compilation and prefixing
+- JavaScript module bundling with webpack
+- Built-in BrowserSync server
+- For production builds:
+  - CSS compression
+  - JavaScript compression
+  - Image compression
 
-Go to root folder of project in CLI
+## Installation
 
-Run following command:
+To use this template, your computer needs:
 
-> bower update
+- [NodeJS](https://nodejs.org/en/) (0.12 or greater)
+- [Git](https://git-scm.com/)
 
-This should install the jQuery, Modernizr and FontAwesome packages
 
-> gulp
+### Manual Setup
 
-Compiles the SCSS files. (Only need to run this when you change the .scss files)
+To manually set up the template, first download it with Git.
+Open the folder in your command line, and install the needed dependencies:
 
-Everything should now be into place to upload the site.
-
-## JSON-LD Event Information
-
-Currently, the JSON LD only contains the mother Event of oSoc15, spanning the entire duration.
-As soon as we have more information, we should add the subEvents for every day.
-
-```json
-{
-          "@context" : "http://schema.org",
-          "@type" : "Event",
-          "name" : "Open Summer of code 2017",
-          "startDate" : "2017-07-03T09:00",
-          "endDate" : "2017-07-28T17:00",
-          "organizer" : {
-                "@id" : "https://opencorporates.com/id/companies/be/0845419930",
-                "@type": "Organization",
-                "name": "Open Knowledge Belgium",
-                "url" : "http://www.openknowledge.be"
-          },
-          "location" : {
-             "@type" : "Place",
-             "name" : "TBA",
-             "address" : "TBA"
-          },
-          "image" : "http://2017.summerofcode.be/images/socialmedia/logo.png"
-      }
+```bash
+cd projectname
+npm install
 ```
 
-### subEvents
+Finally, run `npm start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
 
-This part of the code can just be added after the  "image" : ".../logo.png" line, seperated by a comma.
-It would also be nice to use URIs for the locations once they are defined.
-
-```json
-"subEvent" : [{
-        "@type" : "Event",
-        "name" : "Introduction",
-        "startDate" : "2014-07-06T09:30",
-        "endDate" : "2014-07-06T10:30",
-        "organizer" : { "@id": "https://opencorporates.com/id/companies/be/0845419930"},
-        "location" : { 
-           "@type" : "Place",
-           "name" : "TBA",
-           "address" : "TBA"
-        }
-    }, 
-    {
-        "@type" : "Event",
-        "name" : "Project assignment",
-        "startDate" : "2014-07-06T11:00",
-        "endDate" : "2014-07-06T12:00",
-        "organizer" :{ "@id": "https://opencorporates.com/id/companies/be/0845419930"},
-        "location" : { 
-           "@type" : "Place",
-           "name" : "TBA",
-           "address" : "TBA"
-        }
-    }]
 ```
+http://localhost:8000
+```
+
+To create compressed, production-ready assets, run `npm run build`.
+
+
+### Viewing the website without building
+
+You can also click `dist/index.html` to just view the website without building.

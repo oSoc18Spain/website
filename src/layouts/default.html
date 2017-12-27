@@ -1,0 +1,51 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400" rel="stylesheet">
+  </head>
+  <body>
+  <div class="grid-container">
+    <div class="top-bar landing-page-animation">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li>
+            {{#unlesspage 'index'}}
+              <a href="/" title="home">
+                <span>
+                  <?xml version="1.0" encoding="UTF-8"?>
+                  <svg viewBox="-10 -10 280 280" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="c-top-bar__emblem">
+                    <title>oSoc-emblem</title>
+                    <path d="M142.681744,7.74861622 C155.101496,12.9277895 165.935225,19.8482752 175.153848,28.507835 C184.370235,37.1763476 191.562148,47.3108751 196.727351,58.9069412 C201.894791,70.5030072 204.482985,82.7369576 204.482985,95.5908869 C204.482985,108.726828 201.894791,121.099546 196.727351,132.695612 C191.562148,144.293917 184.370235,154.426206 175.153848,163.088004 C165.935225,171.758755 155.101496,178.603142 142.681744,183.630118 C130.241859,188.666047 116.757302,191.172821 102.241493,191.172821 C87.7144988,191.172821 74.2321779,188.666047 61.8012409,183.630118 C49.370304,178.603142 38.5499977,171.758755 29.3291371,163.088004 C20.1127505,154.426206 12.9118892,144.293917 7.74444913,132.695612 C2.57700907,121.099546 0,108.726828 0,95.5908869 C0,82.7369576 2.57700907,70.5030072 7.74444913,58.9069412 C12.9118892,47.3108751 20.1127505,37.1763476 29.3291371,28.507835 C38.5499977,19.8482752 49.370304,12.9277895 61.8012409,7.74861622 C74.2321779,2.59182484 87.7144988,0 102.241493,0 C116.757302,0 130.241859,2.59182484 142.681744,7.74861622"></path>
+                  </svg>
+                </span>
+              </a>
+            {{/unlesspage}}
+          </li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="program.html">Program</a></li>
+          <li><a href="journal.html">News &amp; Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="apply.html">Apply</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+      {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+      {{> body}}
+    </div>
+
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+.top-bar-right .menu a {
+	color: rgba($white, 0.75);
+	transition: all 400ms;
+	font-family: Montserrat, sans-serif;
+	font-weight: 400;
+	font-size: 1.05rem;
+	position: relative;
+
+	&:before {
+		content:"";
+		display: block;
+		position: absolute;
+		background-color: $white;
+		left: -1px;
+		top: 0;
+		bottom: 0;
+		right: auto;
+		transition: all 200ms linear;
+	}
+
+	&:after {
+		position: absolute;
+		content: "";
+		display: block;
+		border-bottom: 1px solid $white;
+		bottom: 0;
+		left: 1rem;
+		width: 0;
+		transition: all 200ms linear;
+	}
+
+	&:hover,
+	.is-active {
+		// background-color: scale-color($button-background, $lightness: +15%);
+		color: $white;
+
+		// &:before {
+		// 	left: 100%;
+		// 	right: 0;
+		// }
+
+		&:after {
+			width: calc(100% - 2rem);
+			right: 1rem;
+			transition: all 200ms linear;
+		}
+	}
+}
+
+.menu a {
+	padding: 0.8rem 0.5rem 0.5rem;
+
+	@include breakpoint(medium) {
+		padding: 0.7rem 1rem;
+	}
+}
+
+.menu li:last-child a {
+	border: 1px solid $white;
+	margin-left: 1rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+
+	&:hover {
+		background-color: $white;
+		color: $primary-color;
+
+		&:after {
+			content: normal;
+		}
+	}
+}
+
+.top-bar .top-bar-left .menu li a {
+	position: relative;
+	z-index: 1;
+	// animation: showEmblem 1.5s linear 1.5s forwards;
+ //  	transform: scale(0.99);
+ //  	stroke-dasharray: 0 1000;
+	// opacity: 0;
+
+	svg#c-top-bar__emblem {
+		display: block;
+		fill: $white;
+		// stroke-width: 10px;
+		// stroke: $white;
+		width: 1.5rem;
+		height: 1.5rem;
+
+		&:hover {
+			width: 2rem;
+			height: 1.5rem;
+		}
+	}
+}
+
+// @keyframes showEmblem {
+// 	100% {
+// 		opacity: 1;
+// 	    stroke-dasharray: 1000 0;
+// 	}
+// }
