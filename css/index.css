@@ -324,10 +324,10 @@ h2 {
 
 #location {
     color: #FFF;
-    padding-bottom: 45px;
+    padding-bottom: 30px;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOo2sFQDwAElAGyy5g1dAAAAABJRU5ErkJggg==), url("assets/2016_3.jpg");
     background-size: cover;
-    min-height: 600px;
+    min-height: 400px;
 }
 @media screen and (max-width: 480px) {
     #location {
