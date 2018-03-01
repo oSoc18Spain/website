@@ -691,6 +691,11 @@ h2 {
 }
 #mc_embed_signup .btn:hover,
 #mc_embed_signup .btn:active,
+#mc_embed_signup .btn:disabled{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;;
+}
 #mc_embed_signup .btn:focus {
     background-color: #7ab800;
     color: #2D2D2D;
