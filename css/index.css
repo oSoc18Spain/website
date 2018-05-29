@@ -95,7 +95,7 @@ h2 {
 .nav ul li {
     text-transform: uppercase;
     float: left;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 .nav ul li a {
     text-decoration: none;
@@ -343,7 +343,59 @@ h2 {
 
 
 
+/* =============================
+* WHO ARE WE SECTIONS
+* ============================== */
 
+#organization {
+    background-color: #FFF;
+    padding: 34px;
+    color: #2D2D2D;
+}
+
+
+#organization h2 {
+    margin-top: 8px;
+}
+
+#organization li {
+    list-style-type: none;
+}
+
+
+#organization .skill-gallery {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 0;
+}
+#organization .skill-gallery li {
+    width: 33%;
+}
+@media screen and (max-width: 768px) {
+    #organization .skill-gallery li {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 480px) {
+    #organization .skill-gallery li {
+        width: 100%;
+    }
+}
+
+#organization .skill-gallery li img {
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
 
 /* =============================
 * LOCATION SECTION
